@@ -94,3 +94,9 @@ input[type="color"]::-webkit-color-swatch-wrapper {
   height: 50vh;
 
 }
+
+
+.active {
+  background-color: #020929;
+  color: #fff;
+}
