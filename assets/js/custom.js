@@ -5,8 +5,8 @@
 /* -------------------------- */
 
 
-let optionButton = document.getElementById('option-button');
-let advancedOptions = document.getquerySelctorAll('.avd-option-button');
+let optionButton = document.getElementById('.option-button');
+let advancedOptions = document.getquerySelctorAll('adv-option-button');
 let fontName = document.getElementById('fontName');
 let fontSizeRf = document.getElementById('fontSize');
 let writingArea = document.getElementById('text-input');
