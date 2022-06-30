@@ -23,6 +23,40 @@ let fontlist = [
     'Impact',
 ]
 
+const modifyText = (command, defaultUi, value) => {
+
+    document.execCommand(command, defaultUi, value);
+}
+
+const highlighterRemover = (className) => {
+
+    className.forEach((button) => {
+        button.classList.remove("active");
+    });
+}
+
+
+const highlighter = (className, needsRemoval) => {
+    className.forEach((button) => {
+        button.addEventListener('click', () => {
+            if (needsRemoval) {
+                let alreadyActive = false;
+                if (button.classList.contains("active")) {
+                    alreadyActive = true;
+                }
+                highlighterRemover(className);
+
+                if (!alreadyActive) {
+                    button.classList.add("active");
+                }
+                else {
+                    button.classList.toggle("active");
+                }
+            }
+        });
+    })
+}
+
 
 
 const initializer = () => {
@@ -49,13 +83,7 @@ const initializer = () => {
     fontSizeRf.value = "3";
 }
 
-const modifyText = (command, defaultUi, value) => {
 
-    document.execCommand(command, defaultUi, value);
-
-
-
-}
 
 optionButton.forEach((button) => {
 
@@ -91,42 +119,3 @@ linkButton.addEventListener('click', () => {
 
 
 });
-
-
-const highlighter = (className, needsRemoval) => {
-    className.forEach((button) => {
-
-        button.addEventListener('click', () => {
-            if (needsRemoval) {
-                let alreadyActive = false;
-                if (button.classList.contains("active")) {
-                    alreadyActive = true;
-                }
-                highlighterRemover(className);
-
-                if (!alreadyActive) {
-                    button.classList.add("active");
-                }
-                else {
-                    button.classList.toggle("active");
-
-                }
-            }
-
-        });
-
-
-
-
-    })
-
-
-
-}
-
-const highlighterRemover = (className) => {
-
-    className.forEach((button) => {
-        button.classList.remove("active");
-    });
-} 
