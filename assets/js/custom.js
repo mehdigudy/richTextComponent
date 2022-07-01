@@ -88,6 +88,7 @@ const initializer = () => {
 optionButton.forEach((button) => {
 
     button.addEventListener('click', () => {
+        console.log(button.id);
         modifyText(button.id, false, null);
     });
 
@@ -119,3 +120,6 @@ linkButton.addEventListener('click', () => {
 
 
 });
+
+textInputFocose = document.querySelector('#text-input');
+textInputFocose.focus();
