@@ -26,52 +26,43 @@ body {
 .options {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
   gap: 1rem;
 }
 
 button {
   height: 2rem;
   width: 2rem;
-
   border: none;
   outline: none;
   cursor: pointer;
-  display: grid;
-  place-items: center;
-
+  /* display: grid;
+  place-items: center; */
 }
 
-
-select{
+select {
   height: 2rem;
   width: 2rem;
-
   border: none;
   outline: none;
   cursor: pointer;
-  display: grid;
-  place-items: center;
+  /* display: grid;
+  place-items: center; */
+  font-family: "poppins", sans-serif;
 }
 
-
-.options label ,
-.options select{
-
-  font-family: 'poppins', sans-serif;
-
-}
+/* .options label,
+.options select {
+  font-family: "poppins", sans-serif;
+} */
 
 .input-wrapper {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  font-size: 0.9rem;
 }
 
-
 input[type="color"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   width: 2rem;
   height: 1rem;
@@ -80,23 +71,19 @@ input[type="color"] {
   background-color: transparent;
 }
 
-
-input[type="color"]::-webkit-color-swatch-wrapper {
+/* input[type="color"]::-webkit-color-swatch-wrapper {
   border-radius: 0.5rem;
-  box-shadow:  0 0 0 2px #fff , 0 0 0 3px #020929;
-}
-
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #020929;
+} */
 
 #text-input {
   margin-top: 1.5rem;
   border: 1px solid whitesmoke;
-  padding: 1.2rem ;
+  padding: 1.2rem;
   height: 50vh;
-
 }
 
-
 .active {
-  background-color: #020929;
-  color: #fff;
+  background-color: red;
+  color: bule;
 }
