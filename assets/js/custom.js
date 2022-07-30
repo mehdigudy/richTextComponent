@@ -1,5 +1,5 @@
 
-let optionButton = document.querySelectorAll('.option-buttonformat');
+let optionButton = document.querySelectorAll('.option-button-format');
 let advancedOptions = document.querySelectorAll('.adv-option-button');
 let fontName = document.getElementById('fontName');
 let fontSizeRf = document.getElementById('fontSize');
@@ -11,9 +11,9 @@ let formatButton = document.querySelectorAll('.format');
 let scriptButton = document.querySelectorAll('.script');
 
 
-// list of fontlist
+// list of font list
 
-let fontlist = [
+const fontList = [
     'Arial',
     'Arial Black',
     'Comic Sans MS',
@@ -59,14 +59,13 @@ const highlighter = (className, needsRemoval) => {
 
 
 
-const initializer = () => {
+function initializer() {
 
     highlighter(alignButtons, true);
-    highlighter(spacingButtons, true)
+    highlighter(spaceButton, true)
     highlighter(formatButton, false);
     highlighter(scriptButton, true);
-
-    fontlist.map((font) => {
+    fontList.map((font) => {
         let option = document.createElement('option');
         option.value = font;
         option.innerText = font;
@@ -75,8 +74,8 @@ const initializer = () => {
 
     for (let i = 1; i < 7; i++) {
         let option = document.createElement('option');
-        option.value = i;
-        option.innerText = i;
+        option.value = i.toString();
+        option.innerText = i.toString();
         fontSizeRf.appendChild(option);
     }
 
@@ -108,11 +107,13 @@ advancedOptions.forEach((button) => {
 linkButton.addEventListener('click', () => {
     let url = prompt('Enter the URL');
 
+
+    let userLink;
     if (/http/i.test(userLink)) {
 
         modifyText(linkButton.id, false, userLink);
     } else {
-        userLink = 'http://' + userLink;
+        userLink = 'https://' + userLink;
         modifyText(linkButton.id, false, userLink);
 
     }
@@ -121,5 +122,5 @@ linkButton.addEventListener('click', () => {
 
 });
 
-textInputFocose = document.querySelector('#text-input');
-textInputFocose.focus();
+textInputFocuses = document.querySelector('#text-input');
+textInputFocuses.focus();

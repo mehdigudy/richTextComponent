@@ -45,8 +45,6 @@ select {
   border: none;
   outline: none;
   cursor: pointer;
-  /* display: grid;
-  place-items: center; */
   font-family: "poppins", sans-serif;
 }
 
@@ -85,5 +83,5 @@ input[type="color"] {
 
 .active {
   background-color: red;
-  color: bule;
+  color: blue;
 }
